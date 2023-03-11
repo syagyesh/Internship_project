@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUP</title>
+</head>
+<body>
+    <h1>Kindly Perform the Registration task to become member of this family.</h1>
+
+    <form method="post" action="/signup">
+        {% csrf_token %}
+        <label for="username">UserName: </label>
+        <input type="text" name="username" placeholder="Create a Username...">
+        <br>
+        <label for="fname">First Name: </label>
+        <input type="text" name="fname" placeholder="Enter First Name...">
+        <br>
+        <label for="lname">Last Name: </label>
+        <input type="text" name="lname" placeholder="Enter Last Name...">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" placeholder="Enter Email ID...">
+        <br>
+        <label for="passwd">Password: </label>
+        <input type="password" name="passwd" placeholder="Create a Password...">
+        <br>
+        <label for="cpasswd">Confirm Password: </label>
+        <input type="password" name="cpasswd" placeholder="Confirm Password...">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
